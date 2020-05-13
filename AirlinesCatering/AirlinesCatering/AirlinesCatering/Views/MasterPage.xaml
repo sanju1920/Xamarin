@@ -3,13 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AirlinesCatering.ViewModels"
+             xmlns:local1="clr-namespace:AirlinesCatering.Views"
+             
              mc:Ignorable="d"
-             x:Class="AirlinesCatering.Views.MasterPage">
+             x:Class="AirlinesCatering.Views.MasterPage" 
+             Title="Airline Catering">
     <ContentPage.Content>
        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="listView" x:FieldModifier="public">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type local:NavigationItems}">
+                        <local:NavigationItems Title="Login" IconSource="contacts.png" TargetType="{x:Type local1:Login}" />
+                        <local:NavigationItems Title="Register" IconSource="todo.png" TargetType="{x:Type local1:Register}" />
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <!--<Image Source="{Binding IconSource}" />-->
+                                <Label Grid.Column="1" Text="{Binding Title}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
