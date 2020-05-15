@@ -12,10 +12,10 @@ namespace SqliteApp.Standard.Service
             _airlineContext =new  AirlineContext();
         }
 
-        public  Users GetUsers(string userId, string password)
+        public  Users GetUsers(string email, string password)
         {
             return _airlineContext.Users.
-                Where(x=> (x.UserName == userId) && x.Password ==password)
+                Where(x=> (x.Email == email) && x.Password ==password)
                 .FirstOrDefault();
         }
 
