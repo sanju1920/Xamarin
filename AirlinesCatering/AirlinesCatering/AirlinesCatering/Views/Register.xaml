@@ -26,11 +26,11 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Image Source="image.jpg" HeightRequest="90" VerticalOptions="EndAndExpand"/>
-                <Entry Grid.Row="1" Placeholder="Name" PlaceholderColor="#bababa" FontSize="16" MaxLength="30"/>
-                <Entry Grid.Row="2" Placeholder="Email" PlaceholderColor="#bababa" FontSize="16" MaxLength="30"/>
-                <Entry Grid.Row="3" Placeholder="Password" PlaceholderColor="#bababa" FontSize="16" IsPassword="True" MaxLength="30"/>
-                <Entry Grid.Row="4" Placeholder="Phone Number" PlaceholderColor="#bababa" FontSize="16" MaxLength="10"/>
-                <Button Text="LogIn" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="5"/>
+                <Entry Grid.Row="1" Placeholder="Name" PlaceholderColor="#bababa" FontSize="16" MaxLength="30" Text="{Binding Name}"/>
+                <Entry Grid.Row="2" Placeholder="Email" PlaceholderColor="#bababa" FontSize="16" MaxLength="30" Text="{Binding Email}"/>
+                <Entry Grid.Row="3" Placeholder="Password" PlaceholderColor="#bababa" FontSize="16" IsPassword="True" MaxLength="30" Text="{Binding Password}"/>
+                <Entry Grid.Row="4" Placeholder="Phone Number" PlaceholderColor="#bababa" FontSize="16" MaxLength="10" Text="{Binding Number}"/>
+                <Button Text="LogIn" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="5" Command="{Binding SignUpCommand}"/>
             </Grid>
 
             <StackLayout Grid.Row="2" BackgroundColor="#ffffff">

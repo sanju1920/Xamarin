@@ -1,0 +1,8 @@
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\bin\Debug\netstandard2.0\SqliteApp.Standard.deps.json
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\bin\Debug\netstandard2.0\SqliteApp.Standard.dll
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\bin\Debug\netstandard2.0\SqliteApp.Standard.pdb
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\obj\Debug\netstandard2.0\SqliteApp.Standard.csprojAssemblyReference.cache
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\obj\Debug\netstandard2.0\SqliteApp.Standard.AssemblyInfoInputs.cache
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\obj\Debug\netstandard2.0\SqliteApp.Standard.AssemblyInfo.cs
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\obj\Debug\netstandard2.0\SqliteApp.Standard.dll
+C:\Users\Sanjay\Desktop\Xamarin\Xamarin\AirlinesCatering\SqliteApp.Standard\obj\Debug\netstandard2.0\SqliteApp.Standard.pdb
