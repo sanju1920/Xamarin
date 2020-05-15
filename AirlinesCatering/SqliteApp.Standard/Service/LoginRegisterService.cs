@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace SqliteApp.Standard.Service
 {
-    public class LoginRegister : ILoginRegister
+    public class LoginRegisterService : ILoginRegisterService
     {
         private AirlineContext _airlineContext;
-        public LoginRegister()
+        public LoginRegisterService()
         {
             _airlineContext =new  AirlineContext();
         }

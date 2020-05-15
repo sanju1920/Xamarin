@@ -2,7 +2,7 @@
 
 namespace SqliteApp.Standard.Service
 {
-    public interface ILoginRegister
+    public interface ILoginRegisterService
     {
         Users GetUsers(string userId , string password);
         bool Register(Users users);
