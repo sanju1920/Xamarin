@@ -5,6 +5,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\netstandard2.0\SqliteApp.Standard.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netstandard2.0\SqliteApp.Standard.deps.json" />
+    <Content Include="obj\Debug\netstandard2.0\SqliteApp.Standard.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\SqliteApp.Standard.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netstandard2.0\SqliteApp.Standard.dll" />
+    <None Include="bin\Debug\netstandard2.0\SqliteApp.Standard.pdb" />
+    <None Include="obj\Debug\netstandard2.0\SqliteApp.Standard.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netstandard2.0\SqliteApp.Standard.assets.cache" />
+    <None Include="obj\Debug\netstandard2.0\SqliteApp.Standard.dll" />
+    <None Include="obj\Debug\netstandard2.0\SqliteApp.Standard.pdb" />
+    <None Include="obj\SqliteApp.Standard.csproj.nuget.cache" />
+    <None Include="obj\SqliteApp.Standard.csproj.nuget.g.props" />
+    <None Include="obj\SqliteApp.Standard.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="3.1.4" />
   </ItemGroup>
 

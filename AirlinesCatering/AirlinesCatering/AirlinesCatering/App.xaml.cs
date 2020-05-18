@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AirlinesCatering.Views;
+using SqliteApp.Standard;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,11 +8,11 @@ namespace AirlinesCatering
 {
     public partial class App : Application
     {
-        public App()
+        public App(AirlineContext context)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Login(context);
         }
 
         protected override void OnStart()

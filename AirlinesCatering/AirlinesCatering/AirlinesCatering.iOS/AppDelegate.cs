@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
+using SqliteApp.Standard;
 using UIKit;
 
 namespace AirlinesCatering.iOS
@@ -22,8 +24,14 @@ namespace AirlinesCatering.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+        
+            var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"..","Library",
+                "AirlineCateringDb.db");
+
+            var _context = new AirlineContext(dbPath);
+
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(_context));
 
             return base.FinishedLaunching(app, options);
         }

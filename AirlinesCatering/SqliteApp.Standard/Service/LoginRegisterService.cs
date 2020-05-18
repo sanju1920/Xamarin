@@ -7,9 +7,9 @@ namespace SqliteApp.Standard.Service
     public class LoginRegisterService : ILoginRegisterService
     {
         private AirlineContext _airlineContext;
-        public LoginRegisterService()
+        public LoginRegisterService(AirlineContext airlineContext)
         {
-            _airlineContext =new  AirlineContext();
+            _airlineContext = airlineContext;
         }
 
         public  Users GetUsers(string email, string password)

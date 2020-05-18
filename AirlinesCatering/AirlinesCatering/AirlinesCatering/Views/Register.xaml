@@ -35,7 +35,11 @@
 
             <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
                 <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
-                <Label Text="Already Have Account? Login" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="Already Have Account? Login" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

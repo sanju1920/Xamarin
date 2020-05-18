@@ -1,4 +1,5 @@
 ﻿using AirlinesCatering.ViewModels;
+using SqliteApp.Standard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,10 @@ namespace AirlinesCatering.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Register : ContentPage
     {
-        public Register()
+        public Register(AirlineContext context)
         {
             InitializeComponent();
-            BindingContext = new RegisterViewModel(Navigation);
+            BindingContext = new RegisterViewModel(Navigation,context);
         }
     }
 }

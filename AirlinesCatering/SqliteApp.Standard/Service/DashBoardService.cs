@@ -32,13 +32,25 @@ namespace SqliteApp.Standard.Service
             {
                 dbMeal.Name = meal.Name;
                 dbMeal.MealType = meal.MealType;
-                try
-                {
-                    _airlineContext.SaveChanges();
-                    status = true;
-                }
-                catch { }
             }
+            else
+            {
+                dbMeal = new Meals
+                {
+                    Name = meal.Name,
+                    MealType = meal.MealType,
+                    IsActive = true,
+                    CreatedOnUtc = DateTime.UtcNow
+                };
+                _airlineContext.Meals.Add(dbMeal);
+            }
+
+            try
+            {
+                _airlineContext.SaveChanges();
+                status = true;
+            }
+            catch { }
             return status;
         }
     }

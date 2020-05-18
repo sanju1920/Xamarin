@@ -1,4 +1,5 @@
 ﻿using AirlinesCatering.ViewModels;
+using SqliteApp.Standard;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace AirlinesCatering
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
-        public MainPage()
+        public MainPage(AirlineContext context)
         {
             InitializeComponent();
             masterPage.listView.ItemSelected += OnItemSelected;
