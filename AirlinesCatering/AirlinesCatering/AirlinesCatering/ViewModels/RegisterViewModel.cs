@@ -16,7 +16,7 @@ namespace AirlinesCatering.ViewModels
         }
         public string Name { set; get; }
         public string Password { set; get; }
-        public int Number { set; get; }
+        public int? Number { set; get; }
         public string Email { set; get; }
 
         public Command SignUpCommand { get; }

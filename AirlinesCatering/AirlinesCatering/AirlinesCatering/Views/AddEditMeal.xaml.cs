@@ -11,12 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace AirlinesCatering.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DashBoard : ContentPage
+    public partial class AddEditMeal : ContentPage
     {
-        public DashBoard()
+        public AddEditMeal()
         {
             InitializeComponent();
-            BindingContext = new DashBoardViewModel(Navigation);
+            BindingContext = new AddEditMealViewModel(Navigation);
         }
     }
 }

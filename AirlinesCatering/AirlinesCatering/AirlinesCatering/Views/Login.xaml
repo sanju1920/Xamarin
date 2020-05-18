@@ -13,7 +13,7 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0" Grid.Row="0">
-                <Label Text="Login"/>
+                <Label Text="Login" FontSize="16"/>
             </StackLayout>
             
             <Grid RowSpacing="20" Grid.Row="1" Margin="20,0,20,0">

@@ -17,6 +17,7 @@
                         <local:NavigationItems Title="Login" IconSource="contacts.png" TargetType="{x:Type local1:Login}" />
                         <local:NavigationItems Title="Register" IconSource="todo.png" TargetType="{x:Type local1:Register}" />
                         <local:NavigationItems Title="DashBoard" IconSource="" TargetType="{x:Type local1:DashBoard}" />
+                        <local:NavigationItems Title="Add New Meal" IconSource="" TargetType="{x:Type local1:AddEditMeal}" />
                     </x:Array>
                 </ListView.ItemsSource>
                 <ListView.ItemTemplate>
