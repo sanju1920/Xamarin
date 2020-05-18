@@ -21,6 +21,8 @@ namespace AirlinesCatering.Droid
                 "AirlineCateringDb.db");
 
             var _context= new AirlineContext(dbPath);
+            _context.Database.EnsureCreatedAsync();
+            _context.Database.EnsureCreated();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

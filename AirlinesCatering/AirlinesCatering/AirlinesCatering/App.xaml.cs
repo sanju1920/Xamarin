@@ -12,7 +12,7 @@ namespace AirlinesCatering
         {
             InitializeComponent();
 
-            MainPage = new Login(context);
+            MainPage = new NavigationPage(new Login(context));
         }
 
         protected override void OnStart()

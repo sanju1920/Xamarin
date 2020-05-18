@@ -28,7 +28,7 @@ namespace SqliteApp.Standard.Service
                 _airlineContext.SaveChanges();
                 status = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {              
             }
             return status;
