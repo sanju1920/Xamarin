@@ -33,12 +33,11 @@ namespace AirlinesCatering.ViewModels
             var user = login.GetUsers(userId, password);
             if(user!= null)
             {
-                _navigation.PopAsync();
-                _navigation.PushAsync(new DashBoard(_context, user));
+                App.Current.MainPage = new NavigationPage(new DashBoard(_context, user));
             }
             else
             {
-                
+                App.Current.MainPage.DisplayAlert("Error", "Invalid Email or Password", "Ok");
             }      
         }
 

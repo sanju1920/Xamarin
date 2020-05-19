@@ -35,9 +35,13 @@ namespace AirlinesCatering.ViewModels
                 Name = Name,
                 MealType = MealType
             };
+            if (string.IsNullOrEmpty(Name) && string.IsNullOrEmpty(MealType))
+            {
+                App.Current.MainPage.DisplayAlert("Alert", "Please Enter Meal Name and Type", "Ok");
+                return;
+            }
             _boardServive.UpdateMealById(user, Id);
-            _navigation.PopAsync();
-            _navigation.PushAsync(new DashBoard(_context, _currentUser));
+            App.Current.MainPage = new NavigationPage(new DashBoard(_context, _currentUser));
         }
 
         public void EditMode(Meals meals)

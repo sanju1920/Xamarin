@@ -34,8 +34,7 @@ namespace AirlinesCatering.ViewModels
         private void DeleteMeal(object obj)
         {
             _boardService.DeleteMealById(Meal.Id);
-            _navigation.PopAsync();
-            _navigation.PushAsync(new DashBoard(_context, _currentUser));
+            App.Current.MainPage = new NavigationPage(new DashBoard(_context, _currentUser));
             
         }
 
