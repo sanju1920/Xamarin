@@ -5,11 +5,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AirlinesCatering.Views.DashBoard">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to DashBoard"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ContentPage.Content >
+        <StackLayout  BackgroundColor="White" >
+            <Label Text="{Binding UserName}"  FontSize="16" HorizontalOptions="Center"/>
+            <Button Text="Add New Meal" Command="{Binding AddMealCommand}" Margin="20,0,20,0" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start"/>
+            <ListView ItemsSource="{Binding UserMeals}" Margin="20,0,20,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="{Binding Meal.Name}" FontSize="16"/>
+                                <Label Text="{Binding Meal.MealType}" FontSize="16"/>
+                                <Button Text="Edit" Command="{Binding EditMealCommmand}" BackgroundColor="Green" TextColor="White" HeightRequest="40"   HorizontalOptions="End"  VerticalOptions="Start"/>
+                                <Button Text="Delete" Command="{Binding DeleteMealCommand}" BackgroundColor="Red" TextColor="White" HeightRequest="40"  VerticalOptions="Start"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

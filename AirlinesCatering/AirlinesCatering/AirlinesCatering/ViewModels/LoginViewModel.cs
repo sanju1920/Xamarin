@@ -33,7 +33,8 @@ namespace AirlinesCatering.ViewModels
             var user = login.GetUsers(userId, password);
             if(user!= null)
             {
-                _navigation.PushAsync(new DashBoard(_context));
+                _navigation.PopAsync();
+                _navigation.PushAsync(new DashBoard(_context, user));
             }
             else
             {

@@ -1,5 +1,6 @@
 ﻿using AirlinesCatering.ViewModels;
 using SqliteApp.Standard;
+using SqliteApp.Standard.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,10 @@ namespace AirlinesCatering.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashBoard : ContentPage
     {
-        public DashBoard(AirlineContext context)
+        public DashBoard(AirlineContext context,Users users)
         {
             InitializeComponent();
-            BindingContext = new DashBoardViewModel(Navigation,context);
+            BindingContext = new DashBoardViewModel(Navigation,context,users);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AirlinesCatering.ViewModels;
 using SqliteApp.Standard;
+using SqliteApp.Standard.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,15 @@ namespace AirlinesCatering.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddEditMeal : ContentPage
     {
-        public AddEditMeal(AirlineContext context)
+        public AddEditMeal(AirlineContext context, Users currentUser, Meals meal)
         {
             InitializeComponent();
-            BindingContext = new AddEditMealViewModel(Navigation,context);
+            var viewModel = new AddEditMealViewModel(Navigation, context, currentUser);
+            if (meal != null)
+            {
+                viewModel.EditMode(meal);
+            }
+            BindingContext = viewModel;
         }
     }
 }

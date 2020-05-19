@@ -1,4 +1,5 @@
-﻿using SqliteApp.Standard;
+﻿using AirlinesCatering.Views;
+using SqliteApp.Standard;
 using SqliteApp.Standard.EntityModels;
 using SqliteApp.Standard.Service;
 using Xamarin.Forms;
@@ -10,11 +11,13 @@ namespace AirlinesCatering.ViewModels
         public INavigation _navigation;
         private readonly AirlineContext _context;
         private readonly IDashBoardService _boardServive;
-        public AddEditMealViewModel(INavigation navigation, AirlineContext context)
+        private readonly Users _currentUser;
+        public AddEditMealViewModel(INavigation navigation, AirlineContext context,Users users)
         {
             _navigation = navigation;
             _context = context;
             _boardServive = new DashBoardService(context);
+            _currentUser = users;
             SaveCommand = new Command(Save);
             Title = "Add New Meal";
         }
@@ -34,12 +37,14 @@ namespace AirlinesCatering.ViewModels
             };
             _boardServive.UpdateMealById(user, Id);
             _navigation.PopAsync();
+            _navigation.PushAsync(new DashBoard(_context, _currentUser));
         }
 
         public void EditMode(Meals meals)
         {
             Name = meals.Name;
             MealType = meals.MealType;
+            Id = meals.Id;
             Title = "Edit Meal";
         }
     }

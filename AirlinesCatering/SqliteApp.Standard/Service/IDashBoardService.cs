@@ -10,5 +10,6 @@ namespace SqliteApp.Standard.Service
         List<Meals> GetMeals();
         Meals GetMealById(int Id);
         bool UpdateMealById(Meals meal, int Id);
+        bool DeleteMealById(int Id);
     }
 }

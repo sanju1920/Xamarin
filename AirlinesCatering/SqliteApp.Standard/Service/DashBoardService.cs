@@ -14,6 +14,20 @@ namespace SqliteApp.Standard.Service
             _airlineContext = airlineContext;
         }
 
+        public bool DeleteMealById(int Id)
+        {
+            bool status = false;
+            var meal = GetMealById(Id);
+            meal.IsActive = false;
+            try
+            {
+                _airlineContext.SaveChanges();
+                status = true;
+            }
+            catch { }
+            return status;
+        }
+
         public Meals GetMealById(int Id)
         {
             return _airlineContext.Meals.Where(x => x.Id == Id).FirstOrDefault();
